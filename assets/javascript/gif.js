@@ -1,14 +1,6 @@
-// create an array of category items
-var sports = ["steph curry", "kevin durant", "lebron james", "james hardin", "san francisco giants", "golden state warriors", "san jose sharks", "buster posey", "joe panik", "bruce bochy", "hunter pence", "lance armstrong", "tour de france", "chris froome", "peter sagan", "venus williams", "oprah", "serena williams", "maria sharapova", "danica patrick", "tonya harding", "nancy kerrigan"];
-// create buttons using JS of the array of  category items - use a loop
-// each time a button is clicked the img div area clears to make room for the new set of images(previously viewed ones disappear)
+// create an array of clickable items
 
-// request 10 fixed-height items of category from giphy
-
-
-// show the rating of each giphy in a paragraph
-
-// make each giphy start in a paused state and on click animate
+var sports = ["steph curry", "kevin durant", "lebron james", "james hardin", "san francisco giants", "golden state warriors", "san jose sharks", "buster posey", "joe panik", "bruce bochy", "hunter pence", "lance armstrong", "tour de france", "chris froome", "peter sagan", "venus williams", "oprah", "bike crashes", "cats and cucumbers", "smiling dogs"];
 
 // create a submit button that takes user input and creates another category item by adding it to the array
 $(document).ready(function () {
@@ -19,13 +11,16 @@ $(document).ready(function () {
     
         renderButtons();
     });
+    
+    // This NEEDS to be 'document' - not a $jquery selector - so when the page loads any click on the doc will work - otherwise the page loads before the items are added to the array 
+
     $(document).on("click",".sporty", function () {
         // Grabbing and storing the data-name property value from the button
         
         $("#sports").empty();
         var sports = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            sports + "&api_key=dc6zaTOxFJmzC&limit=10";
+            sports + "&api_key=IGfsR8cPY5lg46lqFb0qZszrXY8zScAl&limit=10&rating=g&rating=pg";
             console.log(sports);
         $.ajax({
                 url: queryURL,
@@ -38,10 +33,12 @@ $(document).ready(function () {
     
                 var results = response.data
                 for (var j = 0; j < results.length; j++) {
-                    var sportDiv = $("<div>");
-                    var p = $("<p>").text("Rating:  " + results[j].rating);
-                    
+                    var sportDiv = $("<div>").attr("class", "trouble");
+                    var p = $("<p>").text("Rating:  " + results[j].rating.toUpperCase());
+                     // This is the part that handles the animation  
                     var sportImage = $("<img>");
+                    
+                    // This assigns the necessary data states for the animation on click below
                     sportImage.attr({
                         "src": results[j].images.fixed_height_still.url,
                         "data-state": "still",
@@ -52,7 +49,7 @@ $(document).ready(function () {
                    
     
                     sportImage.on("click", function() {
-                        
+                        // This checks the state - if the state is still, we change it to animate, else we change it to still - like a toggle   
                         var state = $(this).attr("data-state");
                         if (state === "still") {
                             $(this).attr("src", $(this).attr("data-animate"));
@@ -67,9 +64,11 @@ $(document).ready(function () {
                     
     
     
-    
-                    sportDiv.append(p);
                     sportDiv.append(sportImage);
+                    sportDiv.append(p);
+                    
+                    
+                    // sportImage.append(p);
                    
     
                     $("#sports").append(sportDiv);
@@ -80,7 +79,7 @@ $(document).ready(function () {
     
 });
 
-
+// This is the function that creates the buttons
 function renderButtons() {
     $("#sportsButton").empty();
 

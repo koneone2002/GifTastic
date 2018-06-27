@@ -1,0 +1,109 @@
+
+body {
+    background-color: lightgray;
+}
+
+ /* Buttons */
+ #sportsButton {
+    width: 80%;
+    margin: 20px 30px 20px 30px;
+    padding: 10px;
+}
+ .sporty {
+    background-color: cornflowerblue;
+    color: white;
+    margin: 2px;
+    border: 1px solid darkblue;
+    box-shadow: 5px 2px 2px #888;
+    border-radius: 8px;
+    padding: 5px 9px 5px 9px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 14pt;
+}
+
+/* Input form */
+
+#sports-form {
+    z-index: 2;
+    width: 20%;
+    background: white;
+    
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 15px;
+    float: right;
+    margin: 10px 200px 0px 0px;
+}
+
+label {
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+    font-size: 14pt;
+}
+input {
+    border: 1px solid black;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 14pt;
+}
+
+
+#sports-input {
+    width: 80%; 
+    margin: 5px auto;
+    padding: 5px;
+    background-color: rgb(184, 212, 245);
+    clear: both;
+    
+
+}
+
+#add-sport {
+    background-color: cornflowerblue;
+    color: white;
+    margin: 2px;
+    border: 1px solid darkblue;
+    box-shadow: 5px 2px 2px #888;
+    border-radius: 8px;
+    padding: 5px 7px 5px 7px;
+
+}
+
+/* div {
+    width: 450px;
+    margin: 0;
+} */
+
+/* Where the images are */
+div#sports img {
+    float: left;
+   
+   
+    
+    border: 3px solid white;
+}  
+#sports {
+    margin-left: 30px;
+    width: 62%;
+    
+    
+} 
+
+p {
+   margin-top: 10px;
+    font-family: 'Do Hyeon',sans-serif;
+} 
+.trouble {
+    float: left;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
