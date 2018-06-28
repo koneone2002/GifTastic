@@ -24,7 +24,7 @@ body {
 /* Input form */
 
 #sports-form {
-    z-index: 2;
+  
     width: 20%;
     background: white;
     
@@ -68,24 +68,14 @@ input {
 
 }
 
-/* div {
-    width: 450px;
-    margin: 0;
-} */
-
 /* Where the images are */
 div#sports img {
-    float: left;
-   
-   
-    
+    float: left;  
     border: 3px solid white;
 }  
 #sports {
     margin-left: 30px;
     width: 62%;
-    
-    
 } 
 
 p {
@@ -96,6 +86,22 @@ p {
     float: left;
     padding: 10px;
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+   { 
+    #sportsButton {
+        width: 80%;
+        margin: 20px;
+    }
+    #sports-form {
+        display: block;
+        width: 80%;
+        margin: 20px;
+    }
+}
+
 
 
 

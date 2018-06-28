@@ -1,14 +1,20 @@
 // create an array of clickable items
 
-var sports = ["steph curry", "kevin durant", "lebron james", "james hardin", "san francisco giants", "golden state warriors", "san jose sharks", "buster posey", "joe panik", "bruce bochy", "hunter pence", "lance armstrong", "tour de france", "chris froome", "peter sagan", "venus williams", "oprah", "bike crashes", "cats and cucumbers", "smiling dogs"];
+var sports = ["steph curry", "kevin durant", "lebron james", "james hardin", "san francisco giants", "golden state warriors", "san jose sharks", "buster posey", "joe panik", "bruce bochy", "hunter pence", "lance armstrong", "tour de france", "chris froome", "peter sagan", "venus williams", "oprah", "bike crashes", "tom brady", "smiling dogs"];
 
 // create a submit button that takes user input and creates another category item by adding it to the array
 $(document).ready(function () {
     $("#add-sport").on("click", function () {
         event.preventDefault();
         var mySport = $("#sports-input").val().trim();
+        if (mySport === "") {
+            alert("you need to enter something");
+        } else {
+       
         sports.push(mySport);
-    
+        // sessionStorage.clear();
+        // sessionStorage.setItem("sport", mySport);
+        }
         renderButtons();
     });
     
@@ -89,6 +95,7 @@ function renderButtons() {
         button.attr("data-name", sports[i]);
         button.text(sports[i]);
         $("#sportsButton").append(button);
+        localStorage.setItem("button", "sporty");
     }
 }
 
