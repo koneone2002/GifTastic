@@ -88,7 +88,7 @@ p {
 }
 
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 300px) 
   and (max-device-width: 667px) 
    { 
     #sportsButton {
@@ -98,9 +98,25 @@ p {
     #sports-form {
         display: block;
         width: 80%;
-        margin: 20px;
+        margin: 25px;
     }
 }
+
+@media only screen 
+  and (min-device-width: 668px) 
+  and (max-device-width: 1007px) 
+   { 
+    #sports-form {
+        float:right;
+        width: 50%;
+        margin: 10px 50px;
+    }
+    .trouble {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+   }
 
 
 

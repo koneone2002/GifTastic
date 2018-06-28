@@ -1,6 +1,6 @@
 // create an array of clickable items
 
-var sports = ["steph curry", "kevin durant", "lebron james", "james hardin", "san francisco giants", "golden state warriors", "san jose sharks", "buster posey", "joe panik", "bruce bochy", "hunter pence", "lance armstrong", "tour de france", "chris froome", "peter sagan", "venus williams", "oprah", "bike crashes", "tom brady", "smiling dogs"];
+var sports = ["steph curry", "kevin durant", "lebron james", "james hardin", "san francisco giants", "golden state warriors", "san jose sharks", "buster posey", "joe panik", "bruce bochy", "hunter pence", "lance armstrong", "tour de france", "chris froome", "peter sagan", "venus williams", "oprah winfrey", "bike crashes", "tom brady", "smiling dogs"];
 
 // create a submit button that takes user input and creates another category item by adding it to the array
 $(document).ready(function () {
