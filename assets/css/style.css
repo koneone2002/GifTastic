@@ -98,28 +98,14 @@ p {
     #sports-form {
         display: block;
         width: 80%;
-        margin: 25px;
+        margin: 20px;
     }
-    .trouble {
-        width: 80%;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 668px) 
-  and (max-device-width: 1007px) 
-   { 
-    #sports-form {
-        float:right;
-        width: 50%;
-        margin: 10px 50px;
-    }
-    .trouble {
-        width: 80%;
+    img {
         margin: 0 auto;
+        width: 99%;
     }
-
-   }
+   
+}
 
 
 
