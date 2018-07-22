@@ -6,5 +6,6 @@ Once loaded, click the gif and enjoy.
 
 Give it a try!
 
-
+This project entailed using the Giphy API and the AJAX parameters of URL and method: GET
+The project also included creating a pause effect on the giphys using JavaScript data states
 
